@@ -1,1 +1,9 @@
 
+ A system consisting of a server (coordinator) and three client processes.  Each client process will connect to the server over a socket connection and register a user name at the server. The server should be able to handle all three clients concurrently and display the names of the connected clients in real time.  
+ 
+Each client will generate a random integer and upload that integer to the server.  The server will queue the client-generated integers in the order they were received.  The server will then pop the first integer queued and pause all client-handling threads (e.g., sleep or otherwise wait) for the number of seconds equal to that integer.   
+ 
+When the server is finished waiting, it will reply to the client that originated that integer stating, “Server waited <#> seconds for client <name>.”  The client will print this message to the user, as well as display the total time it spent waiting for the server to respond.  The server will repeat this process until killed by the user. 
+ 
+The server and the clients should each be managed with a simple GUI.  The GUI should provide a way kill the process without using the ‘exit’ button on the window.  Messages exchanged between server and client should use HTTP formats and commands.  
+ 
