@@ -1,5 +1,7 @@
 
- A system consisting of a server (coordinator) and three client processes.  Each client process will connect to the server over a socket connection and register a user name at the server. The server should be able to handle all three clients concurrently and display the names of the connected clients in real time.  
+This project is part of distributed system coursework.
+
+A system consisting of a server (coordinator) and three client processes.  Each client process will connect to the server over a socket connection and register a user name at the server. The server should be able to handle all three clients concurrently and display the names of the connected clients in real time.  
  
 Each client will generate a random integer and upload that integer to the server.  The server will queue the client-generated integers in the order they were received.  The server will then pop the first integer queued and pause all client-handling threads (e.g., sleep or otherwise wait) for the number of seconds equal to that integer.   
  
