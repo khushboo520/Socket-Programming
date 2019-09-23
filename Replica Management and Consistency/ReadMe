@@ -1,1 +1,10 @@
 
+The system consisting of a server and three client processes.  Each client process will connect to the server over a socket connection and register a user name at the server. The server should be able to handle all three clients concurrently and display the names of the connected clients in real time.  
+ 
+Each client will implement a simple four-function calculator.  The calculator should handle: • Addition • Subtraction • Multiplication • Division • Negative numbers • Decimals to four digits, rounding up 
+ 
+The calculator need not support grouping operations.  The user should be able to delete any commands prior to their execution. 
+ 
+Each client will keep a local copy of a shared value and will execute all operations on that local copy.  Each calculator should accept an unlimited number of operations prior to executing them and commands should be executed according to algebraic order of operations.  Any operation resulting in NaNs should be rejected by the client and that sequence of operations should be cleared. 
+ 
+When instructed by the user via a GUI input, the server will poll clients for their executed sequence of operations.  Clients will then upload the sequence of operations (not just the final computed value) they have executed locally.  The server will order all operations received from clients according to algebraic order of operations and apply those operations to the value stored on the server.   
